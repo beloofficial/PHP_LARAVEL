@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a href="/logout">Exit</a>
+	@foreach($reqs as $k=>$req) 
+		<div style="border:2px solid black">
+			
+			<h2>{{$req->name}}</h2>
+			<h2>{{$req->mail}}</h2>
+			<h2>{{$req->phone}}</h2>
+			@if($req->check == "false")
+				
+				<a href="{{route('registrate_company',['company'=>$req->name])}}">
+					<h2 style="color:red">{{$req->check}}</h2>
+				</a>
+			@else
+				<a href="{{route('registrate_company',['company'=>$req->name])}}">
+					<h2 style="color:green">{{$req->check}}</h2>
+				</a>
+			@endif
+			
+		</div>
+	@endforeach
+</body>
+</html>

@@ -1,0 +1,87 @@
+<php
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+	<a href="/logout">Exit</a>
+	{!! Form::open(['url'=>route('login2'),'method' => 'POST']) !!}
+		<select name="company_name">
+			@foreach($comp_names as $k=>$comp_name)
+				<option value="{{$comp_name->name}}">{{$comp_name->name}}</option>	
+			@endforeach
+			
+			}
+		</select>
+	{!! Form::button('Выбрать',['class'=>'w3-button','type'=>'submit']) !!}
+	{!! Form::close() !!}
+	<h4>Красный - F200.00</h4>
+	<h4>Синий   - F220.00</h4>
+	<h4>Зеленый - F910.00</h4>
+	<h4>Желтый  - F200.00 c НДС</h4>
+	
+	
+	
+	{!! $calendar->calendar() !!}
+	{!! $calendar->script() !!}
+
+	<table border="1">
+		<tr>
+			<td>Имя</td>
+			<td>{{$company->name}}</td>
+		</tr>
+		<tr>
+			<td>Критерии</td>
+			@if($company->name == 'too')
+				<td>TOO</td>
+			@else
+				<td>ИП</td>
+			@endif
+		</tr>
+		<tr>
+			<td>Налоговый режим</td>
+			@if($company->regime == 'simple')
+				<td>Упрощенный</td>
+			@else
+				<td>Общеустановленный</td>
+			@endif
+		</tr>
+		<tr>
+			<td>НДС</td>
+			@if($company->nds == 'yes')
+				<td>Да</td>
+			@elseif($company->nds == 'no')
+				<td>Нет</td>
+			@else
+				<td>Дата снятия: {{$company->withdraw}}</td>
+			@endif
+		</tr>
+		<tr>
+			<td>БИН</td>
+			<td>{{$company->BIN}}</td>
+		</tr>
+		<tr>
+			<td>Вид деятельности</td>
+			<td>{{$company->activity}}</td>
+		</tr>
+		<tr>
+			<td>Контакты</td>
+			<td>{{$company->contacts}}</td>
+		</tr>
+		<tr>
+			<td>Ответсвтенный</td>
+			<td>{{$company->head}}</td>
+		</tr>
+	</table>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

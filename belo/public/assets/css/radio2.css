@@ -1,0 +1,72 @@
+
+.toggle_radio1{
+  position: relative;
+  background: rgba(0,0,0,.6);
+  margin: 4px auto;
+  overflow: hidden;
+  padding: 0 !important;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  height: 26px;
+  width: 306px;
+}
+.toggle_radio1 > * {
+  float: left;
+}
+.toggle_radio1 input[type=radio]{
+  display: none;
+  /*position: fixed;*/
+}
+.toggle_radio1 label{
+  font: 90%/1.618 "Source Sans Pro";
+  color: rgba(255,255,255,.6);
+  z-index: 0;
+  display: block;
+  width: 100px;
+  height: 20px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1;
+  /*background: rgba(0,0,0,.1);*/
+  text-align: center;
+  /*margin: 0 2px;*/
+  /*background: blue;*/ /*make it blue*/
+}
+.s1{
+  margin:3px 3px 3px 10px;
+}
+.s2{
+
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left:65px;
+}
+.toggle_option_slider1{
+  /*display: none;*/
+  /*background: red;*/
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  top: 3px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#first_toggle1:checked ~ .toggle_option_slider1{
+  background: rgba(255,255,255,.3);
+  left: 3px;
+}
+#second_toggle1:checked ~ .toggle_option_slider1{
+  background: rgba(255,255,255,.3);
+  left: 150px;
+}

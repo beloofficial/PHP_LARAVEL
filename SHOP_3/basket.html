@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    html,
+    body,
+    header,
+    .carousel{
+      height: 60vh;
+    }
+    @media(max-width: 740px){
+      html,
+      body,
+      header,
+      .carousel{
+        height: 100vh;
+      }
+    }
+    @media(min-width: 800px) and (max-width: 850px){
+      html,
+      body,
+      header,
+      .carousel{
+        height: 100vh;
+      }
+    }
+    footer{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand waves-effect">
+        <strong class="blue-text">1000Melochey</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      aria-controls="navbarContent" aria-expanded="false" aria-label = "Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a href="#" class="nav-link waves-effect">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link waves-effect">Товары</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link waves-effect">Контакты</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="#" class="nav-link waves-effect">
+              <!-- Число товаров в корзине -->
+              <span class="badge red z-depth-1 mr-1">
+                1
+              </span>
+              <i class="fa fa-shopping-cart"></i>
+              <span class="clearfix d-none d-sm-inline-block">Cart</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link border border-light rounded waves-effect">      
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        <div class="table-responsive">
+          <table class="table table-striped ">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Название товара</th>
+                <th>Количество</th>
+                <th>Цена за ед.</th>
+                <th>Общая цена</th>
+                <th>Удалить</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><img  src="https://www.smashinn.com/f/13642/136425387/lacoste-colorblock-print-jersey-tennis-t-shirt.jpg" alt="Lacoste" alt="" style="width: 100px; height: auto;";> </th>
+                <th>
+                  Футболка
+                </th>
+                <th>
+                  1
+                </th>
+                <th>
+                  3900KZT
+                </th>
+                <th>
+                  3900KZT
+                </th>
+                <th>
+                  <i class="fas fa-trash"></i>
+                </th>
+              </tr>
+              
+            </tbody>
+        </table>  
+        </div>  
+  
+  <button type="button" class="btn btn-danger">Очистить</button>
+  <button type="button" class="btn btn-success" style="float: right;">Заказать</button>
+
+  <footer class="page-footer text-center font-small mt-4 wow fadeIn sticky-bottom" id="#footer">
+    
+    <div class="pt-4 py-3">
+      Online Shop
+    </div>
+    
+    
+    <div class="footer-copyright py-3">
+      BELO & Aidynjs
+    </div>
+
+  </footer>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+
+  <script>
+    new WOW().init();
+  </script>
+
+</body>
+
+</html>
